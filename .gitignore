@@ -10,8 +10,8 @@ __pycache__/
 *.csv
 
 # Pickle files for CSV caching
-#.csv.pickle
-#.pickle
+*.csv.pickle
+*.pickle
 
 # Distribution / packaging
 .Python
