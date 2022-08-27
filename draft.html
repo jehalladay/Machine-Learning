@@ -1,0 +1,211 @@
+
+Title
+
+
+Rough Outline:
+
+ 0.    Abstract
+Introduction
+Literary Review
+Related Works
+Works on CIC-DDoS2019
+Comparing with Related Works
+The Dataset Used
+Types of Traffic
+The Generation of the Traffic Flows
+Feature Selection
+Table of Features Used and their Descriptions
+Preprocessing Pipeline
+Machine Learning Frameworks
+Experiments
+Performance Metrics Used
+Results
+Discussion
+Future Work
+Conclusions
+References
+
+
+
+
+Abstract
+
+
+
+
+
+
+
+
+
+
+
+1.    Introduction
+    We need to introduce the reader to the problem, how it developed, 
+    What are DDoS attacks?
+
+    Denial-of-Service (DoS) attacks are cyber-attacks  to prevent access to a computer network. 
+    This is accomplished by utilizing a large number of computers in 
+
+
+    Why is it important to detect and mitigate DDoS attacks?
+        From the perspective of consumers, corporations, and governments
+        How much do attacks cost victims
+        How do attacks affect service users
+        How do attacks affect service operators
+        How do attacks affect the people who are exploited by the attacker by having their devices hacked and used as attack vectors
+        
+
+    What motivates attackers to use this method of attack?
+        Proliferation of devices that operate on the edge of networks i.e “the internet of things”
+        Stock manipulation? Corporate sabotage? Etc
+        Are DDoS attacks relatively easy to implement?
+
+    What detection, mitigation, and protection techniques are used against these attacks?
+        
+        
+        
+
+
+
+
+2.    Literary Review
+
+
+
+
+2.1    Related Works
+
+
+
+
+2.2    Works on CIC-DDoS2019
+
+
+
+
+2.3    Comparing with Related Works
+
+
+
+
+
+
+3.    The Dataset Used
+
+
+
+3.1    Types of Traffic
+    Benign, DDoS attack types, etc
+
+
+3.2    The Generation of the Traffic Flows
+
+
+3.3    Feature Selection
+    Feature’s Eliminated:
+
+
+
+3.3.1    Table of Features Used and their Descriptions
+
+Feature
+Description
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.4     Preprocessing Pipeline
+    Here we can elaborate on how we processed the data before it was fed into our classifier such as standardization, normalization, splits/folding, noising/denoising, test/train split sizes, etc
+    How did we balance the data? This is essential because the data is less than 1% benign samples. Its not immediately apparent why this is a bad thing, but a classifier can always guess DDoS and achieve an over 99% accuracy. This is terrible. While we do not need an exact 50/50 split of data, we should experiment with different ways and ratios to split the data. This can drastically impact performance and it will also make it much easier to conduct experiments because we can perform them on a downsampled set of data. We can also use the large amount of left-over data to verify that our model performs correctly on unseen data
+
+4.    Machine Learning Frameworks
+    Did we use Keras, TensorFlow, Theano, PyTorch, SciKitLearn, etc. Did we build our own, is the code available online? We can also use different frameworks on the same experiment to evaluate their effectiveness on this task
+
+
+5.    Performance Metrics Used
+    What were we looking for in our results? Do we want more false positives or false negatives? Which has the worst drawbacks from the perspective of network operators or users?
+    With a DDoS attack, it is reasonable to let through some attacks because it is a massively distributed attack. The goal isnt to screen out 100% of the attacks, but just a high enough percentage to allow normal operation to continue. Similarly false positives that identify benign traffic as a DDoS attack could negatively impact a user just as severely as a DDoS attack. Screening users and forcing them to take “am i human” tests can drive away web traffic and be suboptimal defense strategies
+
+
+
+6.    Experiments
+
+
+
+
+
+7.    Results
+
+
+
+
+8.    Discussion
+
+
+
+
+9.    Future Work
+    Can our work be applied in any way that we were not able to do because of time/skill/focus limitations? Are there unique parallels that can be explored by other researchers or can our work be generalized to a larger problem domain?
+
+
+10.    Conclusion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+
+Abreu Maranhão, J. P., Carvalho Lustosa da Costa, J. P., Pignaton de Freitas, E., Javidi, E., & Timóteo de Sousa Júnior, R. (2020). Error-Robust Distributed Denial of Service Attack Detection Based on an Average Common Feature Extraction Technique. Sensors, 20(20), 5845. https://doi.org/10.3390/s20205845
+Elsayed, M. S., Le-Khac, N.-A., Dev, S., & Jurcut, A. D. (2020). DDoSNet: A Deep-Learning Model for Detecting Network Attacks. 2020 IEEE 21st International Symposium on "A World of Wireless, Mobile and Multimedia Networks" (WoWMoM). https://doi.org/10.1109/wowmom49955.2020.00072
+Maranhao, Joao Paulo & Javidi da Costa, Joao Paulo & Javidi, Elnaz & Andrade, César & de Sousa Junior, Rafael. (2021). Tensor based framework for Distributed Denial of Service attack detection. Journal of Network and Computer Applications. 174. 102894. 10.1016/j.jnca.2020.102894.
+Odumuyiwa, V., & Alabi, R. (2021). DDOS Detection on Internet of Things Using Unsupervised Algorithms. Journal of Cyber Security and Mobility. https://doi.org/10.13052/jcsm2245-1439.1034
+Sharafaldin, I., Lashkari, A. H., Hakak, S., & Ghorbani, A. A. (2019). Developing Realistic Distributed Denial of Service (DDoS) Attack Dataset and Taxonomy. 2019 International Carnahan Conference on Security Technology (ICCST). https://doi.org/10.1109/ccst.2019.8888419
+Shieh, C.-S., Lin, W.-W., Nguyen, T.-T., Chen, C.-H., Horng, M.-F., & Miu, D. (2021). Detection of Unknown DDoS Attacks with Deep Learning and Gaussian Mixture Model. Applied Sciences, 11(11), 5213. https://doi.org/10.3390/app11115213
+Sindian, S., & Sindian, S. (2020). An Enhanced Deep Autoencoder-based Approach for DDoS Attack Detection. WSEAS TRANSACTIONS ON SYSTEMS AND CONTROL, 15, 716–724. https://doi.org/10.37394/23203.2020.15.72
+Vuong, T.-H., Thi, C.-V. N., & Ha, Q.-T. (2021). N-Tier Machine Learning-Based Architecture for DDoS Attack Detection. Intelligent Information and Database Systems, 375–385. https://doi.org/10.1007/978-3-030-73280-6_30
+
+Need to cite:
+Network Intrusion Detection for Distributed Denial-of-Service Attacks using Machine Learning Classification Techniques by Yasar Shahid Hussain
+Detection DDOS Attacks Using Machine Learning Methods by Aytac et al.
